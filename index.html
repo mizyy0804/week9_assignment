@@ -42,42 +42,61 @@
     }
 
    
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background: #111;
-      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);}
+.navbar {
+  position: fixed;  
+  top: 0;    
+  left: 0;  
+  width: 100%; 
+  z-index: 1000;       
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #111;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);
+}
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu li {
+  position: relative;
+}
+.nav-menu a {
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: #ff0000;
+  transition: color 0.3s ease;
+}
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s;
+}
+.nav-menu a:hover {
+  color: #fff;
+}
+.nav-menu a:hover::after {
+  width: 100%;
+}
 
-
-  .nav-menu {
-    display: flex;
-    gap: 40px;           
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-  }
-
-  .nav-menu a {
-    font-family: '국립박물관문화재단클래식B', sans-serif;
-    font-size: 13px;
-    text-decoration: none;
-    color: #ff0000;
-  }
-
-  .nav-menu a:hover {
-    color: #eee; /*마우스 누르면 흰색되는거..*/
-  }
-
-   .title-section {
+  .title-section {
     text-align: center;
     padding: 100px 20px;
     background: #000000;
     position: relative;
     z-index: 0;
     }
- .corner-frame {
+.corner-frame {
     position: absolute;
     width: 350px;
     height: 286px;
@@ -109,26 +128,22 @@
   text-align: center;}
 
 
-  .front {
+.front {
       text-align: center;
       padding: 60px 20px;
       background-color: #000000;}
-
-    .front h1 {
-      font-family: '국립박물관문화재단클래식B', sans-serif;
-      font-size: 100px;
-      color: #ff0000;
-      margin-top: 100px;
-      margin-bottom: 100px; }
-
-    .front h2 {
-      font-family: '국립박물관문화재단클래식B', sans-serif;
-      font-size: 20px;
-      line-height: 1.6;
-      color: #ff0000;
-    }
-
-      .front p {
+  .front h1 {
+        font-family: '국립박물관문화재단클래식B', sans-serif;
+        font-size: 100px;
+        color: #ff0000;
+        margin-top: 100px;
+        margin-bottom: 100px; }
+  .front h2 {
+        font-family: '국립박물관문화재단클래식B', sans-serif;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #ff0000; }
+  .front p {
       font-family: '국립박물관문화재단클래식B', sans-serif;
       font-size: 20px;
       line-height: 1.6;
@@ -136,7 +151,7 @@
     }
 
 
-    .intro-banner {
+.intro-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,12 +159,10 @@
   padding: 100px 60px;
   gap: 40px;
   flex-wrap: wrap;
-}
-  .intro-text {
-    flex: 1;
-    min-width: 300px;
-  }
-
+   }
+.intro-text {
+  flex: 1;
+  min-width: 300px; }
 .text-bubble {
   width: 500px;  
   height: 300px;
@@ -167,7 +180,7 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
-.text-bubble p {
+  .text-bubble p {
   margin: 0;
   color: #eee;
   font-size: 15px;
@@ -415,13 +428,14 @@ h2 { margin-top: 400px;
 <body>
   <nav class="navbar">
   <ul class="nav-menu">
-    <li><a href="#shop">shop</a></li>
+    <li><a href="#item-category">shop</a></li>
     <li><a href="#home">home</a></li>
     <li><a href="#intro">intro</a></li>
     <li><a href="#review">review</a></li>
   </ul>
 </nav>
 
+ <section id="home">
   <header class="front">
     <div class="corner-frame frame-top-left"></div>
     <div class="corner-frame frame-top-right"></div>
@@ -435,6 +449,8 @@ h2 { margin-top: 400px;
     <p class="subtitle-bottom">괴담, 좋아하시나요?</p>
   </section>
 
+
+ <section id="intro">
 <section class="intro-banner">
   <div class="intro-text">
     <div class="text-bubble">
@@ -493,7 +509,9 @@ h2 { margin-top: 400px;
 </section>
 
       
+ <section id="item-category">
  <section class="item-category-section">
+
   <div class="section-title">~ 아이템 카테고리 ~</div>
 
   <div class="item-content space-above">
@@ -623,7 +641,7 @@ h2 { margin-top: 400px;
 </section>
 
 
-
+ <section id="review">
  <section class="item-category-section space-above2">
   <div class="section-title">사용자분들의 실제 체험담</div>
 
