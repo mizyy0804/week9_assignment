@@ -413,6 +413,31 @@
   line-height: 1.7;
 }
 
+.apply-wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.apply-button {
+  width: 300px;
+  height: 100px;
+  background-color: #0011ff;
+  color: white;
+  font-size: 30px;
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+  font-weight: normal;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #005fcc;
+  transform: scale(1.08);
+}
+
 
 /* 푸터 */
 .footer {
@@ -695,9 +720,16 @@
   </div>
 </section>
 
+<section class="event-banner space-above ">
+  <p>❗️<strong>지금 당장 체험해보세요!</strong>❗️
 
+<div class="apply-wrapper">
+  <button class="apply-button" onclick="alert('신청 완료되었습니다, 감사합니다.')">
+    체험신청하기
+  </button>
+</div>
 
-  <footer class="footer">
+  <footer class="footer space-above2">
     <p>고객 서비스: mizyy0804@naver.com | 전화: 999-9999-9999</p>
     <p>사이트 이용 약관 | 개인정보 보호정책 | 쿠키 정책</p>
     <p>© 괴담종합상회 All rights reserved.</p>
