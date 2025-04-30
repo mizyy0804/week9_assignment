@@ -145,7 +145,6 @@
   gap: 40px;
   flex-wrap: wrap;
 }
-
   .intro-text {
     flex: 1;
     min-width: 300px;
@@ -168,25 +167,22 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 .text-bubble p {
   margin: 0;
   color: #eee;
   font-size: 15px;
 }
-
-
 .intro-image {
   flex: 1;
   text-align: center;
 }
-
 .intro-image img {
   max-width: 500px;   
   width: 100%;
   height: auto;
 }
 
+/*흰 강조 섹션~~*/
 .highlight-section {
   background: linear-gradient(to bottom, #000 0%, #fff 20%, #fff 80%, #000 100%);
   padding: 160px 40px;
@@ -194,9 +190,13 @@
   font-family: '국립박물관문화재단클래식B', sans-serif;
   color: #000;
 }
-
 .highlight-section p {
   font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+.highlight-section h1 {
+  font-size: 35px;
   line-height: 1.5;
   color: #000;
 }
@@ -215,7 +215,7 @@
   border: 2px solid red;
   display: inline-block;
   padding: 20px 60px;
-  border-radius: 50%; /* 🎯 타원 모양 */
+  border-radius: 50%;
   margin: 0 auto 60px;
 }
 .item-content {
@@ -239,8 +239,7 @@
   margin: 0 auto; 
 }
 .item-text {
-  flex: 1;
-  min-width: 280px;}
+  flex: 1; min-width: 280px;}
 .item-text h2 {
   font-size: 28px;
   color: red;
@@ -262,15 +261,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;}
+  gap: 20px;  }
 .item-descriptions .item img {
   width: 150px;
   height: 150px;
   object-fit: contain;
   display: block;
-  margin: 0 auto 12px auto;
-}
-.item-descriptions.tight {
+  margin: 0 auto 12px auto;  }
+.item-descriptions.tight{
   justify-content: center;
   gap: 20px;
   max-width: 720px;
@@ -310,7 +308,6 @@
 .review-section p {
   color: white;
   font-family: 'Pretendard', sans-serif; }
-
 
 
 .review-section {
@@ -402,6 +399,9 @@
 .space-above { margin-top: 120px; }
 .space-above2 { margin-top: 200px; }
 
+h1 {font-family: '국립박물관문화재단클래식B', sans-serif; 
+    font-size: 15px;
+    color: #000000 }
 h2 { margin-top: 400px;
   margin-bottom: 40px;
   text-align: center;
@@ -483,7 +483,6 @@ h2 { margin-top: 400px;
   </div>
 </section>
 
-
  <section class="highlight-section">
   <p>그래서 준비했습니다!</p>
   <p>괴담 생존 전문가들이 추천하는 필수 아이템을 한눈에!</p>
@@ -497,7 +496,7 @@ h2 { margin-top: 400px;
  <section class="item-category-section">
   <div class="section-title">~ 아이템 카테고리 ~</div>
 
-  <div class="item-content">
+  <div class="item-content space-above">
     <!-- 왼쪽 텍스트 -->
     <div class="item-text">
       <h2>1. 일상 방어구</h2>
@@ -677,14 +676,15 @@ h2 { margin-top: 400px;
   </div>
 </section>
 
-<section class="event-banner space-above ">
-  <p>❗️<strong>지금 당장 체험해보세요!</strong>❗️
-
-<div class="apply-wrapper">
+<section class="highlight-section space-above">
+  <h1>❗지금 당장 체험해보세요❗️</h1>
+  <div class="apply-wrapper">
   <button class="apply-button" onclick="alert('신청 완료되었습니다, 감사합니다.')">
     체험신청하기
   </button>
 </div>
+</section>
+
 
   <footer class="footer space-above2">
     <p>고객 서비스: mizyy0804@naver.com | 전화: 999-9999-9999</p>
