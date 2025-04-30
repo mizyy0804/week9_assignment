@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>괴담 종합 상회</title>
+
+
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'hzb1zrm',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),
+      tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;
+      h.className+=" wf-loading";
+      tk.src='https://use.typekit.net/'+config.kitId+'.js';
+      tk.async=true;
+      tk.onload=tk.onreadystatechange=function(){
+        a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}
+      };
+      s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+ 
+  <style>
+
+    @font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Pretendard-Regular', sans-serif;
+      background: #000000;
+      color: #eee;
+    }
+
+   
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #111;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);}
+
+
+  .nav-menu {
+    display: flex;
+    gap: 40px;           
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-menu a {
+    font-family: '국립박물관문화재단클래식B', sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    color: #ff0000;
+  }
+
+  .nav-menu a:hover {
+    color: #eee; /*마우스 누르면 흰색되는거..*/
+  }
+
+   .title-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: #000000;
+    position: relative;
+    z-index: 0;
+    }
+
+ .corner-frame {
+    position: absolute;
+    width: 350px;
+    height: 286px;
+    background-image: url('frame.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 20;
+  }
+
+.frame-top-left {
+  top: 50px;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.frame-top-right {
+  top: 50px;
+  right: 0;
+  transform: scaleX(-1); /* 좌우 반전 */
+}
+
+.frame-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.frame-bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.intro-section {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+
+    /* 메인 배너 */
+    .front {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #000000;
+    }
+
+    .front h1 {
+      font-family: '국립박물관문화재단클래식B', sans-serif;
+      font-size: 100px;
+      color: #ff0000;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    h2 {
+  margin-top: 400px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+  color: #ff0000;
+}
+    .front h2 {
+      font-family: '국립박물관문화재단클래식B', sans-serif;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #ff0000;
+    }
+
+      .front p {
+      font-family: '국립박물관문화재단클래식B', sans-serif;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #ff0000;
+    }
+
+
+    .intro-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 100px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+  .intro-text {
+    flex: 1;
+    min-width: 300px;
+  }
+
+.text-bubble {
+  width: 500px;  
+  height: 300px;
+  border: 1.5px solid red;
+  border-radius: 50%;
+  padding: 30px;
+  color: white;
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.text-bubble p {
+  margin: 0;
+  color: #eee;
+  font-size: 15px;
+}
+
+
+.intro-image {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 500px;   
+  width: 100%;
+  height: auto;
+}
+
+.highlight-section {
+  background: linear-gradient(to bottom, #000 0%, #fff 20%, #fff 80%, #000 100%);
+  padding: 160px 40px;
+  text-align: center;
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+  color: #000;
+}
+
+.highlight-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+
+/*아잍템 섹션임~~*/
+ .item-category-section {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 60px;
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: red;
+  border: 2px solid red;
+  display: inline-block;
+  padding: 20px 60px;
+  border-radius: 50%; /* 🎯 타원 모양 */
+  margin: 0 auto 60px;
+}
+
+/* 기본 item-content: 왼쪽 텍스트, 오른쪽 이미지 */
+.item-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+
+.item-content.reverse-layout {
+  flex-direction: row-reverse;
+  justify-content: space-between; 
+  margin-left: -300px;
+}
+.item-display.detect {
+  margin-left: 300px; 
+}
+.item-descriptions.tight {
+  justify-content: center;
+  gap: 20px;
+  max-width: 720px; 
+  margin: 0 auto; 
+}
+
+.item-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.item-text h2 {
+  font-size: 28px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.item-text {
+  flex: 1;
+  min-width: 280px;
+  margin-top: -300px;
+}
+
+
+.item-display {
+  flex: 2;
+  min-width: 400px;
+  margin-left: 300px;
+}
+.item-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+.item-image-wrapper img {
+  width: 100%;
+  display: block;
+  filter: brightness(0.85);
+}
+.item-image-wrapper .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 0, 0, 0.25);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.item-descriptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.item-descriptions.tight {
+  justify-content: center;
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.item {
+  flex: 1;
+  min-width: 180px;
+  position: relative;
+  z-index: 10;
+}
+.item h3 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.item p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.learn-more {
+  background: transparent;
+  border: 1.5px solid red;
+  color: red;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 10;
+}
+.learn-more:hover {
+  background-color: red;
+  color: black;
+}
+
+
+.event-banner p,
+.review-section p {
+  color: white;
+  font-family: 'Pretendard', sans-serif;
+}
+
+
+
+.review-section {
+  background-color: #000;
+  padding: 100px 60px;
+  color: white;
+  font-family: 'Pretendard', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 900px;     /* ✅ 전체 폭 제한 */
+  margin: 0 auto;       /* ✅ 가운데 정렬 */
+}
+
+.review-image img {
+  max-width: 180px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin-left: 0;       /* ✅ 왼쪽 마진 제거 */
+}
+
+.review-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;     /* ✅ 텍스트는 좌측 정렬 유지 */
+}
+
+.review-name {
+  font-family: '국립박물관문화재단클래식B', sans-serif !important;
+  font-size: 20px !important;
+  color: #ff0000 !important;;
+  margin-bottom: 20px;
+}
+.review-detail {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px !important;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+.review-comment {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px !important;
+  font-weight: bold;
+  color: #eee;
+  line-height: 1.7;
+}
+
+
+    /* 푸터 */
+    .footer {
+      background: #000000;
+      color: #aaa;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 6px;
+      line-height: 1.6;
+    }
+
+
+
+.red { color: red !important; }
+.width {min-height: 100px;}
+.space-above { margin-top: 120px; }
+.space-above2 { margin-top: 200px; }
+
+  </style>
+
+
+</head>
+<body>
+  <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="#shop">shop</a></li>
+    <li><a href="#home">home</a></li>
+    <li><a href="#intro">intro</a></li>
+    <li><a href="#review">review</a></li>
+  </ul>
+</nav>
+
+  <header class="front">
+    <div class="corner-frame frame-top-left"></div>
+    <div class="corner-frame frame-top-right"></div>
+    <div class="corner-frame frame-bottom-left"></div>
+    <div class="corner-frame frame-bottom-right"></div>
+
+  <section class="title-section"
+    id="home">
+    <p class="subtitle-top">당신..</p>
+    <h1 class="main-title">괴담종합상회</h1>
+    <p class="subtitle-bottom">괴담, 좋아하시나요?</p>
+  </section>
+
+<section class="intro-banner">
+  <div class="intro-text">
+    <div class="text-bubble">
+      <p>
+        밤마다 괴담 한 편 읽는 것을 즐기는 당신,<br>
+        갑자기 괴담 현상이 나타나면<br>
+        어떻게 해야 할지<br>
+        생각해 본 적 있으신가요?
+      </p>
+    </div>
+  </div>
+  <div class="intro-image">
+    <img src="intro-01.png" alt="intro-02">
+  </div>
+</section>
+
+<section class="intro-banner reverse">
+  <div class="intro-image">
+    <img src="intro-02.png" alt="intro-02">
+  </div>
+  <div class="intro-text">
+    <div class="text-bubble">
+      <p>
+        혹은,<br>
+        집에서 느닷없이 들리는 <span class="red">정체 모를 소리</span><br>
+        때문에 잠 못 이룬 적이 있나요?<br>
+        혹은 한밤중 귀갓길, 아무도 없는 골목에서<br>
+        <span class="red">등 뒤를 스치는 서늘함</span>을 느낀 적은요?
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="intro-banner">
+  <div class="intro-text">
+    <div class="text-bubble centered-text">
+      <p>
+        일상 속 어디에서든 괴담은 갑자기 찾아옵니다.<br>
+        예고 없이 찾아오는 공포 앞에서<br>
+        무방비 상태로 떨고만 있을 순 없습니다.
+      </p>
+    </div>
+  </div>
+  <div class="intro-image">
+    <img src="intro-03.png" alt="intro-03.png">
+  </div>
+</section>
+
+
+ <section class="highlight-section">
+  <p>그래서 준비했습니다!</p>
+  <p>괴담 생존 전문가들이 추천하는 필수 아이템을 한눈에!</p>
+  <p>
+    언제, 어디서 괴담이 시작될지 모르는 현대인들을 위한<br>
+    <span class="red">괴담 생존 아이템 전문 스토어</span>에 오신 것을 환영합니다.
+  </p>
+</section>
+
+      
+ <section class="item-category-section">
+  <div class="section-title">~ 아이템 카테고리 ~</div>
+
+  <div class="item-content">
+    <!-- 왼쪽 텍스트 -->
+    <div class="item-text">
+      <h2>1. 일상 방어구</h2>
+      <p>일상 속 괴담으로부터의 피해를 방지해 보세요.</p>
+    </div>
+
+    <!-- 오른쪽 이미지 + 설명 -->
+    <div class="item-display">
+      <div class="item-image-wrapper">
+        <img src="store-01.png" alt="아이템 이미지">
+        <div class="overlay"></div>
+      </div>
+
+      <div class="item-descriptions">
+        <div class="item">
+          <h3>평온 목걸이</h3>
+          <p>외출 시 착용하면 악령의 접근을 차단하는 부적 목걸이.</p>
+          <button class="learn-more" onclick="alert('외출 시 착용하면 외부의 악의적 기운의 접근을 차단하는 데 효과가 있습니다. 인근에서 갑작스러운 한기나 이명 증상이 사라지는 사례가 다수 보고되었습니다. 단, 소재 특성상 화기나 고온 환경에 노출될 경우 효능이 약화될 수 있으므로 주의 필요!')">더 알아보기</button>
+        </div>
+        <div class="item">
+          <h3>유령 퇴치 모자</h3>
+          <p>착용자 주변의 기운을 안정시켜 유령의 주목을 피함.</p>
+          <button class="learn-more" onclick="alert('착용자의 두개강 주변 기운을 안정시켜, 정체불명의 시선이나 접촉을 회피하는 데 도움을 줍니다. 공공장소나 혼잡한 공간에서 갑작스러운 현기증이나 소름이 느껴질 경우, 착용 시 증상이 완화되었다는 사례가 보고되었습니다. 단, 특정 영적 존재에겐 반응을 유발할 수 있어 민감한 환경에선 사용을 자제해야 합니다.')">더 알아보기</button>
+        </div>
+        <div class="item">
+          <h3>손목 퇴마 보호대</h3>
+          <p>손목에 착용 시, 귀신이 손목을
+            <br>잡아 끄는 것을 방지.</p>
+          <button class="learn-more" onclick="alert('손목에 착용하면, 외부에서 발생하는 이질적 접촉—특히 수면 중 손목을 향한 끌림 현상—을 방지하는 데 효과적입니다. 일부 사용자는 악몽 감소, 팔 저림 완화 등의 부수적 효과를 보고하기도 했습니다. ')">더 알아보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <div class="item-content reverse-layout">
+    <!-- 텍스트 -->
+    <div class="item-text">
+      <h2>2. 탐지 도구</h2>
+      <p>괴담인지 헷갈린다면?
+      <br>이 도구로 한번 판별해보세요.</p>
+    </div>
+
+    <!-- 이미지 + 설명 -->
+    <div class="item-display detect">
+      <div class="item-image-wrapper" style="margin-left: 150px;">
+        <img src="store-02.png" alt="아이템 이미지 ">
+        <div class="overlay"></div>
+      </div>
+
+      <div class="item-descriptions tight">
+        <div class="item">
+          <h3>위험 감지 키링</h3>
+          <p>불길한 기운이 감지되면<br>
+          진동으로 경고!</p>
+          <button class="learn-more" onclick="alert('일반적인 진동 알림이 아닙니다. 이 키링은 특정 주파수의 불길한 기운, 즉 사람이 아닌 무언가의 접근을 감지합니다. 진동이 멈췄다면, 그것은 이미 곁에 있다는 뜻...')">더 알아보기</button>
+        </div>
+        <div class="item">
+          <h3>심령 탐지 펜라이트</h3>
+          <p>어두운 공간에서 특수 파장으로
+          <br>실체를 드러내는 손전등.</p>
+          <button class="learn-more" onclick="alert('특수 파장을 통해, 육안으로는 볼 수 없는 형체를 드러냅니다. 폐건물, 터널, 빈집 등에서 사용 시 이상현상 다수 보고됨. 거울이나 유리에 비추지 말 것!')">더 알아보기</button>
+        </div>
+        <div class="item">
+          <h3>존재 확인 거울</h3>
+          <p>거울에 비치지 않는 이질적인 존재를
+          <br>감지하는 휴대용 거울.</p>
+          <button class="learn-more" onclick="alert('특정 조건에서 거울에 비치지 않는 존재를 식별할 수 있습니다. 주로 밀폐된 공간이나 심야 시간에 반응하며, 거울 속 모습이 실제와 일치하지 않는 현상이 보고되었습니다. 감지 후에는 주기적인 관찰이 권장됩니다.')">더 알아보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="item-content space-above">
+    <!-- 왼쪽 텍스트 -->
+    <div class="item-text">
+      <h2>3. 공간 정화 아이템</h2>
+      <p>지금 계신 공간이 불길하시다구요?
+        <br>이런 아이템으로 간편하게 정화해보세요.</p>
+    </div>
+
+    <!-- 오른쪽 이미지 + 설명 -->
+    <div class="item-display no-margin">
+      <div class="item-image-wrapper">
+        <img src="store-03.png" alt="아이템 이미지">
+        <div class="overlay"></div>
+      </div>
+
+      <div class="item-descriptions">
+        <div class="item">
+          <h3>불길 제거 스프레이</h3>
+          <p>소금과 정화 성분으로 방 안의
+            <br>사악한 기운을 일시적으로 제거.</p>
+          <button class="learn-more" onclick="alert('정제된 소금 입자와 식물성 정화 성분이 포함된 스프레이로, 실내에 퍼진 음습한 기운이나 악의적 에너지를 일시적으로 제거하는 데 효과적입니다. 사용 후 공간이 가볍고 맑아졌다는 체감 보고가 있으며, 심야 시간 사용 시 반응이 더욱 뚜렷하다는 사례도 존재합니다. 반복 사용 시 효과 유지에 도움이 됩니다.')">더 알아보기</button>
+        </div>
+        <div class="item">
+          <h3>방어 라인 테이프</h3>
+          <p>바닥에 붙이면 악령이 넘지 못하는
+          <br>경계선 생성!</p>
+          <button class="learn-more" onclick="alert('착용자의 두개강 주변 기운을 안정시켜, 정체불명의 시선이 바닥에 일정 형식으로 부착하면 비가시적 경계가 형성되어, 특정 종류의 영적 존재가 이를 넘지 못하게 됩니다. 주로 방문, 창가, 침대 주변 등 접근이 우려되는 지점에 사용됩니다. 테이프가 스스로 떨어지거나 끊어질 경우, 경계가 무력화되었을 수 있으니 즉시 교체가 필요합니다.')">더 알아보기</button>
+        </div>
+        <div class="item">
+          <h3>존재 확인 거울</h3>
+          <p>거울에 비치지 않는 이질적인 존재를
+          <br>감지하는 휴대용 거울.</p>
+          <button class="learn-more" onclick="alert('천연 향과 신성 처리된 왁스를 사용한 촛불로, 공기가 묵직하거나 정서적으로 불안정한 공간에 두었을 때 저주, 악몽, 불길한 기운을 완화하는 효과가 있습니다. (불을 붙인 직후 미세한 이명이나 정적이 느껴질 경우, 정화가 진행 중인 신호일 수 있습니다. 한 번에 한 개만 사용하는 것이 권장됩니다.)')">더 알아보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event-banner space-above ">
+  <p>🎁 <strong>이벤트:</strong> 괴담 대비 생존 키트 한정 판매!<br>
+  (평온 목걸이 + 존재 확인 거울 + 방어 라인 테이프로 구성되어 있습니다.)<br>
+  <strong>지금 구매 시, 위험 감지 키링 무료 증정!</strong></p>
+</section>
+
+
+
+ <section class="item-category-section space-above2">
+  <div class="section-title">사용자분들의 실제 체험담</div>
+
+<section class="review-section">
+
+  <div class="review-item">
+    <div class="review-image">
+      <img src="review-01.png" alt="리뷰 1">
+    </div>
+    <div class="review-text">
+      <p class="review-name">강모씨, 프리랜서, 35세</p>
+      <p class="review-detail">구매일시 : 2025.02.19, 안심 차 티백 구매</p>
+      <p class="review-comment">
+        예전엔 악몽때문에 한시간도 못 잤는데,<br>
+        안심 차 티백 덕분에 이젠 8시간 푹 잘 수 있어요.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="review-item">
+    <div class="review-image">
+      <img src="review-02.png" alt="리뷰 2">
+    </div>
+    <div class="review-text">
+      <p class="review-name">김모씨, 학생, 24세</p>
+      <p class="review-detail">구매일시 : 2024.03.02, 불길 제거 스프레이 구매</p>
+      <p class="review-comment">
+        처음엔 반신반의했어요. 그런데 뿌리고 나서부터 방 안에서
+        <br>발자국 소리가 안 들려요.
+        <br>원래 바람 때문이라고 생각했는데... 아무튼 요즘은 조용해서
+        <br>공부에 집중이 잘 됩니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="review-item">
+    <div class="review-image">
+      <img src="review-03.png" alt="리뷰 3">
+    </div>
+    <div class="review-text">
+      <p class="review-name">박모씨, 직장인, 29세</p>
+      <p class="review-detail">구매일시 : 2024.08.17, 존재 확인 거울 구매</p>
+      <p class="review-comment">
+        처음엔 '이런 게 뭐가 필요해~' 했는데, 어느 순간부터
+        <br>제 뒤에 있던 애가 거울에 비치기 시작했어요.
+        <br>이젠 아예 같이 셀카도 찍어요. 인스타엔 못 올리지만요ㅋㅋ
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <p>고객 서비스: mizyy0804@naver.com | 전화: 999-9999-9999</p>
+    <p>사이트 이용 약관 | 개인정보 보호정책 | 쿠키 정책</p>
+    <p>© 괴담종합상회 All rights reserved.</p>
+  </footer>
+</body>
+</html>
