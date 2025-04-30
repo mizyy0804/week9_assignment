@@ -77,7 +77,6 @@
     position: relative;
     z-index: 0;
     }
-
  .corner-frame {
     position: absolute;
     width: 350px;
@@ -85,62 +84,43 @@
     background-image: url('frame.png');
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 20;
-  }
-
+    z-index: 20; }
 .frame-top-left {
   top: 50px;
   left: 0;
-  transform: rotate(0deg);
-}
-
+  transform: rotate(0deg);}
 .frame-top-right {
   top: 50px;
   right: 0;
-  transform: scaleX(-1); /* 좌우 반전 */
-}
-
+  transform: scaleX(-1); }
 .frame-bottom-right {
   bottom: 0;
   right: 0;
-  transform: rotate(180deg);
-}
-
+  transform: rotate(180deg);}
 .frame-bottom-left {
   bottom: 0;
   left: 0;
-  transform: rotate(180deg) scaleX(-1);
-}
+  transform: rotate(180deg) scaleX(-1);}
+
 
 .intro-section {
   margin-top: 80px;
   margin-bottom: 30px;
-  text-align: center;
-}
+  text-align: center;}
 
 
-
-    /* 메인 배너 */
-    .front {
+  .front {
       text-align: center;
       padding: 60px 20px;
-      background-color: #000000;
-    }
+      background-color: #000000;}
 
     .front h1 {
       font-family: '국립박물관문화재단클래식B', sans-serif;
       font-size: 100px;
       color: #ff0000;
       margin-top: 100px;
-      margin-bottom: 100px;
-    }
-    h2 {
-  margin-top: 400px;
-  margin-bottom: 40px;
-  text-align: center;
-  font-family: '국립박물관문화재단클래식B', sans-serif;
-  color: #ff0000;
-}
+      margin-bottom: 100px; }
+
     .front h2 {
       font-family: '국립박물관문화재단클래식B', sans-serif;
       font-size: 20px;
@@ -221,14 +201,13 @@
   color: #000;
 }
 
-/*아잍템 섹션임~~*/
+/*아이템 섹션~~*/
  .item-category-section {
   background-color: #000;
   color: #fff;
   padding: 100px 60px;
   font-family: '국립박물관문화재단클래식B', sans-serif;
 }
-
 .section-title {
   text-align: center;
   font-size: 32px;
@@ -239,16 +218,12 @@
   border-radius: 50%; /* 🎯 타원 모양 */
   margin: 0 auto 60px;
 }
-
-/* 기본 item-content: 왼쪽 텍스트, 오른쪽 이미지 */
 .item-content {
   display: flex;
   align-items: flex-start;
   gap: 60px;
   flex-wrap: wrap;
 }
-
-
 .item-content.reverse-layout {
   flex-direction: row-reverse;
   justify-content: space-between; 
@@ -263,76 +238,56 @@
   max-width: 720px; 
   margin: 0 auto; 
 }
-
 .item-text {
   flex: 1;
-  min-width: 280px;
-}
-
+  min-width: 280px;}
 .item-text h2 {
   font-size: 28px;
   color: red;
-  margin-bottom: 20px;
-}
-
+  margin-bottom: 20px;}
 .item-text {
   flex: 1;
   min-width: 280px;
-  margin-top: -300px;
-}
-
-
+  margin-top: -300px;}
 .item-display {
   flex: 2;
   min-width: 400px;
-  margin-left: 300px;
-}
+  margin-left: 300px;}
 .item-image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  margin-bottom: 40px;
-}
-.item-image-wrapper img {
-  width: 100%;
-  display: block;
-  filter: brightness(0.85);
-}
-.item-image-wrapper .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 0, 0, 0.25);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
+  max-width: 200px;
+  margin-bottom: 40px; }
 .item-descriptions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 20px;}
+.item-descriptions .item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px auto;
 }
 .item-descriptions.tight {
   justify-content: center;
   gap: 20px;
   max-width: 720px;
-  margin: 0 auto;
-}
+  margin: 0 auto;}
 .item {
   flex: 1;
   min-width: 180px;
   position: relative;
-  z-index: 10;
-}
+  z-index: 10;}
 .item h3 {
   font-size: 16px;
   color: #fff;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px;}
 .item p {
   font-size: 14px;
   color: #ccc;
-  margin-bottom: 12px;
-}
+  margin-bottom: 12px;}
 
 .learn-more {
   background: transparent;
@@ -354,8 +309,7 @@
 .event-banner p,
 .review-section p {
   color: white;
-  font-family: 'Pretendard', sans-serif;
-}
+  font-family: 'Pretendard', sans-serif; }
 
 
 
@@ -369,7 +323,6 @@
   align-items: center;
   gap: 100px;
 }
-
 .review-item {
   display: flex;
   align-items: center;
@@ -378,7 +331,6 @@
   max-width: 900px;
   margin: 0 auto;
 }
-
 .review-image img {
   max-width: 180px;
   height: auto;
@@ -386,13 +338,11 @@
   border-radius: 12px;
   margin-left: 0;
 }
-
 .review-text {
   flex: 1;
   min-width: 300px;
   text-align: left;
 }
-
 .review-name {
   font-family: '국립박물관문화재단클래식B', sans-serif !important;
   font-size: 20px !important;
@@ -413,12 +363,12 @@
   line-height: 1.7;
 }
 
+
 .apply-wrapper {
   margin-top: 100px;
   display: flex;
   justify-content: center;
 }
-
 .apply-button {
   width: 300px;
   height: 100px;
@@ -430,30 +380,33 @@
   border: none;
   border-radius: 60px;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
+  transition: all 0.3s ease;}
 .apply-button:hover {
   background-color: #005fcc;
-  transform: scale(1.08);
-}
+  transform: scale(1.08);}
 
 
-/* 푸터 */
+
 .footer {
   background: #000000;
   color: #666;
   padding: 30px 20px;
   text-align: center;
-  line-height: 1.6;
-}
+  line-height: 1.6;}
 .footer p{font-size: 10px; }
+
 
 
 .red { color: red !important; }
 .width {min-height: 100px;}
 .space-above { margin-top: 120px; }
 .space-above2 { margin-top: 200px; }
+
+h2 { margin-top: 400px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: '국립박물관문화재단클래식B', sans-serif;
+  color: #ff0000;}
 
   </style>
 
@@ -554,22 +507,24 @@
     <!-- 오른쪽 이미지 + 설명 -->
     <div class="item-display">
       <div class="item-image-wrapper">
-        <img src="store-01.png" alt="아이템 이미지">
         <div class="overlay"></div>
       </div>
 
       <div class="item-descriptions">
         <div class="item">
+        <img src="s01.png">
           <h3>평온 목걸이</h3>
           <p>외출 시 착용하면 악령의 접근을 차단하는 부적 목걸이.</p>
           <button class="learn-more" onclick="alert('외출 시 착용하면 외부의 악의적 기운의 접근을 차단하는 데 효과가 있습니다. 인근에서 갑작스러운 한기나 이명 증상이 사라지는 사례가 다수 보고되었습니다. 단, 소재 특성상 화기나 고온 환경에 노출될 경우 효능이 약화될 수 있으므로 주의 필요!')">더 알아보기</button>
         </div>
         <div class="item">
+        <img src="s02.png" >
           <h3>유령 퇴치 모자</h3>
           <p>착용자 주변의 기운을 안정시켜 유령의 주목을 피함.</p>
           <button class="learn-more" onclick="alert('착용자의 두개강 주변 기운을 안정시켜, 정체불명의 시선이나 접촉을 회피하는 데 도움을 줍니다. 공공장소나 혼잡한 공간에서 갑작스러운 현기증이나 소름이 느껴질 경우, 착용 시 증상이 완화되었다는 사례가 보고되었습니다. 단, 특정 영적 존재에겐 반응을 유발할 수 있어 민감한 환경에선 사용을 자제해야 합니다.')">더 알아보기</button>
         </div>
         <div class="item">
+        <img src="s03.png">
           <h3>손목 퇴마 보호대</h3>
           <p>손목에 착용 시, 귀신이 손목을
             <br>잡아 끄는 것을 방지.</p>
@@ -592,24 +547,25 @@
     <!-- 이미지 + 설명 -->
     <div class="item-display detect">
       <div class="item-image-wrapper" style="margin-left: 150px;">
-        <img src="store-02.png" alt="아이템 이미지 ">
-        <div class="overlay"></div>
       </div>
 
       <div class="item-descriptions tight">
         <div class="item">
+          <img src="s04.png">
           <h3>위험 감지 키링</h3>
           <p>불길한 기운이 감지되면<br>
           진동으로 경고!</p>
           <button class="learn-more" onclick="alert('일반적인 진동 알림이 아닙니다. 이 키링은 특정 주파수의 불길한 기운, 즉 사람이 아닌 무언가의 접근을 감지합니다. 진동이 멈췄다면, 그것은 이미 곁에 있다는 뜻...')">더 알아보기</button>
         </div>
         <div class="item">
+        <img src="s05.png">
           <h3>심령 탐지 펜라이트</h3>
           <p>어두운 공간에서 특수 파장으로
           <br>실체를 드러내는 손전등.</p>
           <button class="learn-more" onclick="alert('특수 파장을 통해, 육안으로는 볼 수 없는 형체를 드러냅니다. 폐건물, 터널, 빈집 등에서 사용 시 이상현상 다수 보고됨. 거울이나 유리에 비추지 말 것!')">더 알아보기</button>
         </div>
         <div class="item">
+        <img src="s06.png">
           <h3>존재 확인 거울</h3>
           <p>거울에 비치지 않는 이질적인 존재를
           <br>감지하는 휴대용 거울.</p>
@@ -632,27 +588,28 @@
     <!-- 오른쪽 이미지 + 설명 -->
     <div class="item-display no-margin">
       <div class="item-image-wrapper">
-        <img src="store-03.png" alt="아이템 이미지">
-        <div class="overlay"></div>
       </div>
 
       <div class="item-descriptions">
         <div class="item">
+        <img src="s07.png">
           <h3>불길 제거 스프레이</h3>
           <p>소금과 정화 성분으로 방 안의
             <br>사악한 기운을 일시적으로 제거.</p>
           <button class="learn-more" onclick="alert('정제된 소금 입자와 식물성 정화 성분이 포함된 스프레이로, 실내에 퍼진 음습한 기운이나 악의적 에너지를 일시적으로 제거하는 데 효과적입니다. 사용 후 공간이 가볍고 맑아졌다는 체감 보고가 있으며, 심야 시간 사용 시 반응이 더욱 뚜렷하다는 사례도 존재합니다. 반복 사용 시 효과 유지에 도움이 됩니다.')">더 알아보기</button>
         </div>
         <div class="item">
+        <img src="s08.png">
           <h3>방어 라인 테이프</h3>
           <p>바닥에 붙이면 악령이 넘지 못하는
           <br>경계선 생성!</p>
           <button class="learn-more" onclick="alert('착용자의 두개강 주변 기운을 안정시켜, 정체불명의 시선이 바닥에 일정 형식으로 부착하면 비가시적 경계가 형성되어, 특정 종류의 영적 존재가 이를 넘지 못하게 됩니다. 주로 방문, 창가, 침대 주변 등 접근이 우려되는 지점에 사용됩니다. 테이프가 스스로 떨어지거나 끊어질 경우, 경계가 무력화되었을 수 있으니 즉시 교체가 필요합니다.')">더 알아보기</button>
         </div>
         <div class="item">
-          <h3>존재 확인 거울</h3>
-          <p>거울에 비치지 않는 이질적인 존재를
-          <br>감지하는 휴대용 거울.</p>
+        <img src="s09.png">
+          <h3>신성한 촛불 세트</h3>
+          <p>공기가 무거울 때 켜두면 저주를
+            <br>완화시켜주는 향기 촛불.</p>
           <button class="learn-more" onclick="alert('천연 향과 신성 처리된 왁스를 사용한 촛불로, 공기가 묵직하거나 정서적으로 불안정한 공간에 두었을 때 저주, 악몽, 불길한 기운을 완화하는 효과가 있습니다. (불을 붙인 직후 미세한 이명이나 정적이 느껴질 경우, 정화가 진행 중인 신호일 수 있습니다. 한 번에 한 개만 사용하는 것이 권장됩니다.)')">더 알아보기</button>
         </div>
       </div>
